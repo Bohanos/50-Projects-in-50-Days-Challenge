@@ -20,4 +20,4 @@ day01/
 ├── style.css
 └── assets/
     └── images/
-        └── profile.jpg
+        └── logo.png
