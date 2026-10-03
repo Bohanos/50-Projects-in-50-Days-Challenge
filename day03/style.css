@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid blue;
+    max-width: 25rem;
+    margin: 0 auto;
+    padding: 2%;
+    margin-top: 15rem;
+    min-height: 22rem;
+    border-radius: 0.7rem;
+    background-color: gold;
+}
+
+h1{
+    color: blue;
+    background-color: khaki;
+    margin-bottom: 3rem;
+}
+
+section{
+    width: 100%;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 1.4rem;
+}
+
+button{
+    font-size: 1.2em;
+    border-radius: 0.2rem;
+    width: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
