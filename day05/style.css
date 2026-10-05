@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+div h1{
+    background-image: linear-gradient( 45deg, rgb(0, 139, 51), rgb(137, 0, 139));
+    border-radius: 0.5rem;
+    width: 30%;
+    text-align: center;
+}
+
+.clock-container{
+    border: 1px solid green;
+    width: 50%;
+    height: 50vh;
+    border-radius: 15rem;
+    position: relative;
+}
+
+.number{
+    position: relative;
+
+}
+
+.short-hand{
+    border: 3px solid blue;
+    width: 15%;
+    margin: -10% auto 0 50%;
+    position: relative;
+}
+
+.long-hand{
+    border: 3px solid blue;
+    width: 30%;
+    margin: 0 auto 0 50%;
+    position: relative;
+}
+
+.center-dot{
+    color: red;
+    font-size: 200px;
+    margin: -42.5% auto auto 46%;
+    position: relative;
+}
