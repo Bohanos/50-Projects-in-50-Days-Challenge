@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softblush Beauty - Launching Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="landing-container">
+        <div class="img"><a href="#"><img src="./assets/images/flower.png" alt=""></a></div>
+        <div class="content-box">
+            <div class="brand-name">SOFTBLUSH BEAUTY</div>
+
+            <h1 class="main-heading">Launching soon!</h1>
+
+            <p class="subtitle">We are currently making some improvements to our website!</p>
+
+            <button class="notify-btn" id="notifyBtn" onclick="handleNotify()">NOTIFY US</button>
+
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleNotify() {
+            const btn = document.getElementById('notifyBtn');
+            const originalText = btn.textContent;
+            btn.textContent = "THANK YOU!";
+            btn.classList.add('success');
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.remove('success');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
