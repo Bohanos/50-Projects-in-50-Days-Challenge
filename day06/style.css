@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+    background: #071023;
+    color: #eef3ff;
+    font-family: Arial, sans-serif;
+}
+
+.counter-app {
+    width: min(100%, 440px);
+    padding: 40px 32px;
+    border: 1px solid #253858;
+    border-radius: 20px;
+    background: #101c33;
+    box-shadow: 0 24px 60px #0005;
+    text-align: center;
+}
+
+.counter-app h1 {
+    margin: 0;
+    font-size: clamp(28px, 8vw, 40px);
+}
+
+.counter-app h1 span {
+    color: #73a7ff;
+}
+
+.counter-app p {
+    margin: 12px 0 28px;
+    color: #a9b7d0;
+}
+
+#count {
+    display: block;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: clamp(64px, 18vw, 100px);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.buttons button {
+    min-width: 105px;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 10px;
+    background: #2878f0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background: #4b8df4;
+}
+
+.buttons button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+#reset {
+    background: #34435d;
+}
+
+#reset:hover {
+    background: #465875;
+}

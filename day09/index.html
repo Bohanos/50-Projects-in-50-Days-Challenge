@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Knowledge Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="quiz-container">
+        <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
+        <h1>General Knowledge Quiz</h1>
+
+        <section id="quiz" aria-live="polite">
+            <p id="progress"></p>
+            <h2 id="question"></h2>
+            <div class="answers" id="answers"></div>
+            <p id="feedback" role="status"></p>
+            <button class="next-btn" id="nextButton" type="button" disabled>Next question</button>
+        </section>
+
+        <section id="results" aria-live="polite" hidden>
+            <h2>Quiz complete!</h2>
+            <p id="score"></p>
+            <button id="restartButton" type="button">Try again</button>
+        </section>
+    </main>
+
+    <script>
+        const questions = [
+            {
+                question: 'Which planet is known as the Red Planet?',
+                answers: ['Venus', 'Mars', 'Jupiter', 'Mercury'],
+                correct: 1
+            },
+            {
+                question: 'What is the largest ocean on Earth?',
+                answers: ['Atlantic Ocean', 'Indian Ocean', 'Arctic Ocean', 'Pacific Ocean'],
+                correct: 3
+            },
+            {
+                question: 'How many sides does a hexagon have?',
+                answers: ['Five', 'Six', 'Seven', 'Eight'],
+                correct: 1
+            },
+            {
+                question: 'What is the capital city of Japan?',
+                answers: ['Kyoto', 'Osaka', 'Tokyo', 'Hiroshima'],
+                correct: 2
+            },
+            {
+                question: 'Which gas do plants absorb from the atmosphere?',
+                answers: ['Oxygen', 'Nitrogen', 'Carbon dioxide', 'Hydrogen'],
+                correct: 2
+            }
+        ];
+
+        const quiz = document.getElementById('quiz');
+        const results = document.getElementById('results');
+        const progress = document.getElementById('progress');
+        const questionHeading = document.getElementById('question');
+        const answersContainer = document.getElementById('answers');
+        const feedback = document.getElementById('feedback');
+        const nextButton = document.getElementById('nextButton');
+        const scoreOutput = document.getElementById('score');
+        const restartButton = document.getElementById('restartButton');
+
+        let questionIndex = 0;
+        let score = 0;
+        let answered = false;
+
+        function renderQuestion() {
+            const current = questions[questionIndex];
+            answered = false;
+            progress.textContent = `Question ${questionIndex + 1} of ${questions.length}`;
+            questionHeading.textContent = current.question;
+            feedback.textContent = '';
+            answersContainer.replaceChildren();
+            nextButton.disabled = true;
+            nextButton.textContent = questionIndex === questions.length - 1 ? 'See results' : 'Next question';
+
+            current.answers.forEach((answer, index) => {
+                const button = document.createElement('button');
+                button.className = 'answer-btn';
+                button.type = 'button';
+                button.textContent = answer;
+                button.addEventListener('click', () => selectAnswer(index));
+                answersContainer.append(button);
+            });
+        }
+
+        function selectAnswer(selectedIndex) {
+            if (answered) return;
+
+            answered = true;
+            const correctIndex = questions[questionIndex].correct;
+            const answerButtons = answersContainer.querySelectorAll('.answer-btn');
+
+            answerButtons.forEach((button, index) => {
+                button.disabled = true;
+                if (index === correctIndex) button.classList.add('correct');
+                if (index === selectedIndex && selectedIndex !== correctIndex) {
+                    button.classList.add('incorrect');
+                }
+            });
+
+            if (selectedIndex === correctIndex) {
+                score += 1;
+                feedback.textContent = 'That is correct!';
+            } else {
+                feedback.textContent = `Not quite. The correct answer is ${questions[questionIndex].answers[correctIndex]}.`;
+            }
+
+            nextButton.disabled = false;
+            nextButton.focus();
+        }
+
+        function showResults() {
+            quiz.hidden = true;
+            results.hidden = false;
+            scoreOutput.textContent = `You got ${score} out of ${questions.length} questions correct.`;
+            restartButton.focus();
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (!answered) return;
+
+            questionIndex += 1;
+            if (questionIndex === questions.length) {
+                showResults();
+                return;
+            }
+
+            renderQuestion();
+        });
+
+        restartButton.addEventListener('click', () => {
+            questionIndex = 0;
+            score = 0;
+            results.hidden = true;
+            quiz.hidden = false;
+            renderQuestion();
+            answersContainer.querySelector('button').focus();
+        });
+
+        renderQuestion();
+    </script>
+</body>
+
+</html>

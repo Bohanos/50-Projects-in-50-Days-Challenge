@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="counter-app">
+        <h1>Counter <span>App</span></h1>
+        <p>Count up. Count down. Keep track.</p>
+        <output id="count" aria-live="polite">0</output>
+
+        <div class="buttons">
+            <button id="decrement" type="button">Decrease</button>
+            <button id="reset" type="button">Reset</button>
+            <button id="increment" type="button">Increase</button>
+        </div>
+    </main>
+
+    <script>
+        const countOutput = document.getElementById('count');
+        let count = 0;
+
+        function updateCount() {
+            countOutput.textContent = count;
+        }
+
+        document.getElementById('increment').addEventListener('click', () => {
+            count += 1;
+            updateCount();
+        });
+
+        document.getElementById('decrement').addEventListener('click', () => {
+            count -= 1;
+            updateCount();
+        });
+
+        document.getElementById('reset').addEventListener('click', () => {
+            count = 0;
+            updateCount();
+        });
+    </script>
+</body>
+
+</html>
