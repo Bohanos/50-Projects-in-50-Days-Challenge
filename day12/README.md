@@ -33,7 +33,7 @@ A minimal, lightweight React application designed to help track daily spending a
 Clone the repository:
 
 Bash
-git clone [https://github.com/your-username/day-12-expense-tracker.git](https://github.com/your-username/day-12-expense-tracker.git)
+git clone [https://github.com/Bohanos/50-Projects-in-50-Days-Challenge/tree/main/day12.git](https://github.com/Bohanos/50-Projects-in-50-Days-Challenge/tree/main/day12.git)
 cd day-12-expense-tracker
 Install dependencies:
 

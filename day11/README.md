@@ -39,7 +39,7 @@ A modern, responsive Weather Application built with **React (Vite)** and styled 
 Clone the repository:
 
 Bash
-git clone [https://github.com/your-username/day-11-weather-app.git](https://github.com/your-username/day-11-weather-app.git)
+git clone [https://github.com/Bohanos/50-Projects-in-50-Days-Challenge/tree/main/day11.git](https://github.com/Bohanos/50-Projects-in-50-Days-Challenge/tree/main/day11.git)
 cd day-11-weather-app
 Install dependencies:
 
