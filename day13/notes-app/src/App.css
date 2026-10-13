@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f9fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  margin: 20px;
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+textarea {
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  resize: none;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  border-color: #0984e3;
+}
+
+button {
+  cursor: pointer;
+  background-color: #0984e3;
+  color: #fff;
+  border: 0;
+  font-size: 0.95rem;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #74b9ff;
+  color: #2d3436;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.note-card {
+  background-color: #fff3cd;
+  padding: 12px 15px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  word-break: break-word;
+}
+
+.note-card p {
+  font-size: 0.95rem;
+  color: #2d3436;
+  padding-right: 15px;
+}
+
+.delete-btn {
+  background: transparent;
+  color: #d63031;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: transparent;
+  color: #ff7675;
+}
+
+.empty-text {
+  text-align: center;
+  color: #b2bec3;
+  font-size: 0.9rem;
+}

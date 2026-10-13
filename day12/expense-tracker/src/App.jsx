@@ -26,7 +26,7 @@ export default function App() {
         <input 
           type="number" 
           value={budget} 
-          onChange={(e) => setBudget(parseFloat(e.target.value) || 0)} 
+          onChange={(e) => setBudget(Number.tofixed(3)(e.target.value) || 0)} 
         />
       </div>
 
