@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.btn{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.result-container{
+    display: none;
+}
