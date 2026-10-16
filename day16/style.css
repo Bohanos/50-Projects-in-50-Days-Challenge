@@ -1,0 +1,87 @@
+
+/* Universal style  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Page style */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header  */
+h1{
+    background-image: linear-gradient(50deg, darkblue, darkred);
+    color: antiquewhite;
+    margin-bottom: 3rem;
+}
+
+/* Stop Watch Display */
+.stopwatch-display{
+    border: 1px solid red;
+    height: 4.5rem;
+    width: 25rem;
+    margin-bottom: 2rem;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    padding: 1%;
+}
+
+.stopwatch-display span a{
+    font-size: 0.4em;
+    text-decoration: none;
+    color: black;
+}
+
+/* button */
+.buttons{
+    display: flex;
+    width: 20rem;
+    justify-content: space-between;
+}
+
+button{
+    font-size: 2em;
+    border-radius: 0.3rem;
+}
+
+#start{
+    color: green;
+}
+
+#stop{
+    color: red;
+}
+
+#reset{
+    color: grey;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .stopwatch-display {
+    width: 95vw;
+    font-size: 1.1em; /* Scales down text so everything fits */
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .buttons {
+    width: 90vw;
+  }
+
+  button {
+    font-size: 1.5em;
+    padding: 0.2rem 0.8rem;
+  }
+}
