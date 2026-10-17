@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17 - Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="container">
+        <h1>Image Gallery 📸</h1>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+        <button class="filter-btn" data-filter="animals">Animals</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery">
+        <div class="gallery-item" data-category="nature">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=80" alt="Mountain Lake" />
+            <div class="overlay"><span>Mountain Lake</span></div>
+        </div>
+        <div class="gallery-item" data-category="architecture">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&auto=format&fit=crop&q=80" alt="Modern Skyscraper" />
+            <div class="overlay"><span>Modern Skyscraper</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo7OfncDUvvxQzuFag8hAphhK8EJ7B_SODMbpTk0mj2Q&s=10" alt="Cute Panda" />
+            <div class="overlay"><span>Cute Panda</span></div>
+        </div>
+        <div class="gallery-item" data-category="nature">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&auto=format&fit=crop&q=80" alt="Foggy Forest" />
+            <div class="overlay"><span>Foggy Forest</span></div>
+        </div>
+        <div class="gallery-item" data-category="architecture">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&auto=format&fit=crop&q=80" alt="Cozy Interior" />
+            <div class="overlay"><span>Cozy Interior</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+            <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?w=600&auto=format&fit=crop&q=80" alt="Majestic Lion" />
+            <div class="overlay"><span>Majestic Lion</span></div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+        <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="Enlarged View" />
+        <p id="lightboxCaption" class="caption"></p>
+        </div>
+        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
