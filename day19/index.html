@@ -1,20 +1,49 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Currency Converter</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="converter-card">
-            <h1>Currency Converter</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 19 - Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-            <div class="input-group">
-                <label for="amount">Amount</label>
-                <input type="text" id="amount" value="1" min="0" placeholder="Enter amount" step="any">
-            </div>
+  <div class="converter-card">
+    <h2>Currency Converter 💱</h2>
+    
+    <div class="input-group">
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" value="1" min="0" step="any" placeholder="Enter amount">
+    </div>
 
-            <div class="c"></div>
-        </div>
-    </body>
+    <div class="currency-row">
+      <div class="input-group">
+        <label for="fromCurrency">From</label>
+        <select id="fromCurrency">
+          <option value="USD">USD ($)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="NGN" selected>NGN (₦)</option>
+        </select>
+      </div>
+
+      <button id="swapBtn" class="swap-btn" title="Swap Currencies">⇄</button>
+
+      <div class="input-group">
+        <label for="toCurrency">To</label>
+        <select id="toCurrency">
+          <option value="USD" selected>USD ($)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="NGN">NGN (₦)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="result-box">
+      <p id="rateInfo" class="rate-info">1 NGN = 0.00063 USD</p>
+      <h3 id="resultText">0.00 USD</h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
